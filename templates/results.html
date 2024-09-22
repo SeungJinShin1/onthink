@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 결과</title>
+</head>
+<body>
+    <h1>검색 결과</h1>
+    <p>단어: {{ word }}</p>
+    <p>수준(Level): {{ level }}</p>
+
+    <h2>예시 문장</h2>
+    <ul>
+        <!-- 각 문장을 한 줄씩 출력 -->
+        {% for sentence in sentences %}
+            {% for key, value in sentence.items() %}
+                <li>{{ value }}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+
+    <a href="/">다른 단어 검색</a>
+</body>
+</html>
