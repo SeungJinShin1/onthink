@@ -8,7 +8,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 app = Flask(__name__)
 
 # 엑셀 파일 경로 설정 (book.xlsx 파일로 변경)
-excel_file = 'C:/Users/USER/Desktop/python/book.xlsx'
+excel_file = 'C:/Users/User/Desktop/python/book.xlsx'
 
 # 엑셀 파일 읽기 (NaN 값을 빈 문자열로 변환)
 df = pd.read_excel(excel_file).fillna('')
